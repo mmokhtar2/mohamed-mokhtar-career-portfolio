@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-<link rel="icon" type="image/jpeg" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bii.jpg?v=2">
-    <link rel="shortcut icon" type="image/jpeg" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bii.jpg?v=2">
-    <link rel="apple-touch-icon" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bii.jpg?v=2">
+<link rel="icon" type="image/jpeg" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
+    <link rel="shortcut icon" type="image/jpeg" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
 
 </head> <style>
     :root {
@@ -526,6 +526,62 @@ body.hover-active #cur-ring {
 body.dash-open{overflow:hidden;}
 body.dash-open #cur,body.dash-open #cur-ring,body.dash-open #cursor-glow{display:none;}
 body.dash-open{cursor:auto;}
+
+/* ── MOBILE / TOUCH OPTIMISATION ── */
+@media (hover:none),(pointer:coarse){
+  body{cursor:auto;}
+  #cur,#cur-ring,#cursor-glow{display:none !important;}
+}
+@media(max-width:768px){
+  html,body{overflow-x:hidden;}
+  .wrap{padding:0 1rem;}
+  .section{padding:3rem 0;}
+  .section-title{font-size:clamp(1.6rem,7vw,2.2rem);line-height:1.15;}
+  .hero{min-height:auto;padding:3.5rem 1rem 3rem;}
+  .hero-name{font-size:clamp(2rem,10vw,2.8rem);}
+  .hero-chips{gap:.45rem;margin-bottom:1.6rem;}
+  .hero-location{line-height:1.9;margin-bottom:1.6rem;overflow-wrap:anywhere;}
+  .hero-location a{display:inline-block;margin:0 .35rem;}
+  .stats-row{display:grid;grid-template-columns:repeat(2,1fr);margin:1.5rem 0;}
+  .stat-item{min-width:0;padding:1.1rem .5rem;border-bottom:1px solid var(--border);}
+  .stat-lbl{line-height:1.5;}
+  .bio-card,.tl-content,.project-card,.vision-card{padding:1.1rem;}
+  .bio-card p,.bio-card{line-height:1.75;}
+  .timeline{margin-top:1rem;}
+  .tl-item{gap:.8rem;}
+  .tl-content{margin-bottom:1rem;}
+  .tl-top{flex-direction:column;align-items:flex-start;gap:.3rem;}
+  .project-card{margin-top:1rem;}
+  .project-specs{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .architecture-list,.consulting-grid,.validation-grid,.cert-grid,.skills-matrix{grid-template-columns:minmax(0,1fr) !important;}
+  .gdev-badges-grid,.badges-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;}
+  .architecture-item,.spec-item,.badge-card,.cert-item,.skill-item{min-width:0;overflow-wrap:anywhere;}
+  .eco-strip{gap:.5rem;}
+  .dash-btn{width:100%;justify-content:center;text-align:center;padding:.9rem 1rem;line-height:1.5;}
+  .loop-strip{font-size:.6rem;letter-spacing:.06em;padding:.8rem;}
+  .loop-concept{font-size:.95rem;}
+  .ticker-wrap,.ticker{max-width:100%;overflow:hidden;}
+  img,svg,video,canvas{max-width:100%;}
+  pre,code,table{max-width:100%;overflow-x:auto;}
+  footer .footer-inner,.footer-links{flex-direction:column;gap:.6rem;text-align:center;}
+  #dash-bar{font-size:.58rem;letter-spacing:.08em;padding:.5rem .7rem;padding-top:calc(.5rem + env(safe-area-inset-top,0px));}
+  #dash-bar span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+}
+@media(max-width:400px){
+  .gdev-badges-grid,.badges-grid{grid-template-columns:minmax(0,1fr);}
+  .project-specs{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;}
+}
+
+.hl-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.5rem 0;position:relative;z-index:2;margin-bottom:2.5rem;font-size:.73rem;}
+.hl-item{white-space:nowrap;}
+.hl-item+.hl-item::before{content:'·';margin:0 .7rem;color:var(--text3);}
+.hl-item:nth-child(2){white-space:normal;overflow-wrap:anywhere;}
+#dash-close{white-space:nowrap;flex:0 0 auto;}
+@media(max-width:768px){
+  .hl-row{flex-direction:row;gap:.55rem 1.2rem;margin-bottom:1.6rem;font-size:.78rem;}
+  .hl-item+.hl-item::before{content:none;}
+  .hl-item:nth-child(-n+3){flex-basis:100%;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -541,7 +597,7 @@ body.dash-open{cursor:auto;}
   <h1 class="hero-name">Mohamed Mokhtar</h1>
   <div class="hero-title">Enterprise Future Intelligenc Architecture</div>
   <div class="hero-company">MAA AI — Enterprise AI &amp; Business Intelligence</div>
-  <div class="hero-location" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem .8rem;align-items:center;position:relative;z-index:2;margin-bottom:2.5rem;font-size:.73rem;">📍 Dubai, UAE &nbsp;·&nbsp; <a href="mailto:mmokhtar@marketingasart.art" style="color:var(--plasma);text-decoration:none;">mmokhtar@marketingasart.art</a> &nbsp;·&nbsp; +971 58 669 3544 &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/mohamed-mokhtarr" target="_blank" style="color:var(--plasma);text-decoration:none;">LinkedIn</a> &nbsp;·&nbsp; <a href="https://me.developers.google.com/u/108123826485940394878" target="_blank" style="color:var(--plasma);text-decoration:none;">Google Dev Profile</a> &nbsp;·&nbsp; <a href="https://github.com/mmokhtar2" target="_blank" style="color:var(--plasma);text-decoration:none;">GitHub</a> &nbsp;·&nbsp; <a href="https://wa.me/971585855297" target="_blank" style="color:var(--plasma);text-decoration:none;">WhatsApp</a></div>
+  <div class="hero-location hl-row"><span class="hl-item">📍 Dubai, UAE</span><span class="hl-item"><a href="mailto:mmokhtar@marketingasart.art" style="color:var(--plasma);text-decoration:none;">mmokhtar@marketingasart.art</a></span><span class="hl-item">+971 58 669 3544</span><span class="hl-item"><a href="https://www.linkedin.com/in/mohamed-mokhtarr" target="_blank" style="color:var(--plasma);text-decoration:none;">LinkedIn</a></span><span class="hl-item"><a href="https://me.developers.google.com/u/108123826485940394878" target="_blank" style="color:var(--plasma);text-decoration:none;">Google Dev Profile</a></span><span class="hl-item"><a href="https://github.com/mmokhtar2" target="_blank" style="color:var(--plasma);text-decoration:none;">GitHub</a></span><span class="hl-item"><a href="https://wa.me/971585855297" target="_blank" style="color:var(--plasma);text-decoration:none;">WhatsApp</a></span></div>
   <div class="hero-chips">
     <span class="chip chip-plasma">Enterprise GenAI</span>
     <span class="chip chip-arc">ServiceNow · Now Assist</span>
