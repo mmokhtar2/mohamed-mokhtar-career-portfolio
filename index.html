@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <link rel="icon" type="image/jpeg" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg">
+<link rel="icon" type="image/jpeg" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
+    <link rel="shortcut icon" type="image/jpeg" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://ftqbsvzwcwnvonyobgmn.supabase.co/storage/v1/object/public/maa-images/bbrowser%20logo.jpg?v=2">
 
 </head> <style>
     :root {
@@ -506,6 +508,8 @@ body.hover-active #cur-ring {
 .loop-return{display:flex;align-items:center;gap:.8rem;margin-top:1.2rem;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);}
 .loop-return::before,.loop-return::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--border-hi),transparent);}
 .loop-return span{color:var(--gold);}
+.dash-btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.6rem;font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--void);background:linear-gradient(135deg,var(--gold),var(--plasma));border-radius:40px;padding:.85rem 1.6rem;font-weight:500;box-shadow:0 0 24px -4px rgba(0,212,255,.5);transition:transform .3s,box-shadow .3s;}
+.dash-btn:hover{transform:translateY(-2px);box-shadow:0 0 36px 0 rgba(245,200,66,.55);}
 .dash-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);text-decoration:none;border-bottom:1px dashed var(--border-hi);padding-bottom:2px;transition:color .3s,border-color .3s;}
 .dash-link:hover{color:var(--plasma);border-color:var(--plasma);}
 @media(max-width:1000px){.loop-grid{grid-template-columns:repeat(3,1fr)}.loop-node:nth-child(3)::after{display:none}}
@@ -945,6 +949,7 @@ body.dash-open{cursor:auto;}
         <span class="eco-tag chip-gold">ML Continuous Learning</span>
         <span class="eco-tag chip-mint">Enterprise Governance</span>
       </div>
+      <a class="dash-btn" href="#impact-dashboard" data-open-dash>📊 View the built impact dashboard</a>
     </div>
   </section>
 
@@ -968,7 +973,7 @@ body.dash-open{cursor:auto;}
     </div>
 
     <div class="loop-return">↺ <span>Success feeds understanding</span> · the loop never stops ↺</div>
-    <a class="dash-link" href="#impact-dashboard" data-open-dash>View the built impact dashboard ↗</a>
+    <a class="dash-btn" href="#impact-dashboard" data-open-dash>📊 Open the MAA OS Impact Dashboard</a>
   </section>
 
   <!-- ═══════════════ EXPERIENCE ═══════════════ -->
